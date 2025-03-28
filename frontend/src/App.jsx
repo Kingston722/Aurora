@@ -73,7 +73,7 @@ function App() {
         
                 <div className="flex justify-center mt-10">
                   <a
-                    href="https://github.com"
+                    href="https://github.com/Kingston722/Aurora"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 px-6 py-3 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
