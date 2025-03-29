@@ -15,7 +15,7 @@ const Task3 = () => {
     if (grades.length === 0) return;
 
     try {
-      const response = await fetch("http://localhost:8080/average", {
+      const response = await fetch("http://localhost:8080/grades/average", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

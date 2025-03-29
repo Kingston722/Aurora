@@ -28,7 +28,7 @@ const Footer = () => {
 
         <div className="flex items-center gap-4 text-lg">
           <a
-            href="https://github.com/Kingston722/Aurora"
+            href="https://github.com/Kingston722"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-white transition"

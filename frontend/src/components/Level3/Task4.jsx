@@ -9,13 +9,14 @@ const Task4 = () => {
 
   const handleConvert = async () => {
     try {
-      await axios.get("http://localhost:8080/currency/convert", {
+      const response = await axios.get("http://localhost:8080/currency/convert", {
         params: {
           amount: parseFloat(amount),
           from: fromCurrency,
           to: toCurrency,
         },
       });
+
       setResult(response.data);
     } catch (error) {
       console.error("Error converting currency:", error);
