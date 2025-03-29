@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Eye, EyeOff } from "lucide-react"; // Import icons
+import { Eye, EyeOff } from "lucide-react"; 
 
 const Task2 = () => {
     const [password, setPassword] = useState("");
@@ -13,7 +13,7 @@ const Task2 = () => {
         }
 
         try {
-            const response = await fetch("http://localhost:8080/password-checker/check", {
+            const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/password-checker/check`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

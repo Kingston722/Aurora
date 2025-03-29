@@ -50,13 +50,13 @@ const Task3 = () => {
 
             <div className="flex justify-between gap-4">
                 <button
-                    onClick={() => sendFileToBackend("http://localhost:8080/file-security/encrypt", setEncryptedText)}
+                    onClick={() => sendFileToBackend(`${process.env.REACT_APP_BACKEND_URL}/file-security/encrypt`, setEncryptedText)}
                     className="bg-blue-600 hover:bg-blue-700 py-2 px-4 rounded w-1/2"
                 >
                     Encrypt
                 </button>
                 <button
-                    onClick={() => sendFileToBackend("http://localhost:8080/file-security/decrypt", setDecryptedText)}
+                    onClick={() => sendFileToBackend(`${process.env.REACT_APP_BACKEND_URL}/file-security/decrypt`, setDecryptedText)}
                     className="bg-green-600 hover:bg-green-700 py-2 px-4 rounded w-1/2"
                 >
                     Decrypt

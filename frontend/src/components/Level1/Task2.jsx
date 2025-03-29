@@ -8,7 +8,8 @@ const Task2 = () => {
     if (!text.trim()) return;
 
     try {
-      const response = await fetch("http://localhost:8080/palindrome", {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/palindrome`,
+        {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

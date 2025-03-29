@@ -12,7 +12,6 @@ const Level2 = () => {
         <h2 className="text-4xl font-bold mb-6 text-blue-400">Level 2</h2>
         <p className="text-gray-300 text-lg">Select a task to get started.</p>
   
-        {/* Task Selection Buttons */}
         <div className="flex gap-4 justify-center mt-4">
           {["Task 1", "Task 2", "Task 3"].map((task, index) => (
             <button
@@ -25,7 +24,6 @@ const Level2 = () => {
           ))}
         </div>
   
-        {/* Render Task Components */}
         <div className="mt-6">
           {selectedTask === "task1" && <Task1 />}
           {selectedTask === "task2" && <Task2 />}
