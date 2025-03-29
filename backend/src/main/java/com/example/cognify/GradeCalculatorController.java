@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/grades")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "*")
 public class GradeCalculatorController {
 
     @PostMapping("/average")

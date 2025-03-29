@@ -5,7 +5,7 @@ import java.security.SecureRandom;
 
 @RestController
 @RequestMapping("/password")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "*")
 public class PasswordController {
 
     private static final String LOWERCASE = "abcdefghijklmnopqrstuvwxyz";

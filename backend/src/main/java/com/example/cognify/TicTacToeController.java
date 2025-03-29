@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/tic-tac-toe")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "*")
 public class TicTacToeController {
     private char[][] board;
     private char currentPlayer;
