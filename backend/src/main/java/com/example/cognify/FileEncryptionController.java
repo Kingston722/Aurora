@@ -14,7 +14,7 @@ import java.util.Base64;
 
 @RestController
 @RequestMapping("/file-security")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "http://localhost:5173")
 public class FileEncryptionController {
 
     private static final String SECRET_KEY = "ThisIsASecretKeyForAES256!!"; // 32-byte for AES-256

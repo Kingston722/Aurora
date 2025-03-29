@@ -6,7 +6,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/currency")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "http://localhost:5173")
 public class CurrencyConverterController {
 
     private static final String API_KEY = "b86cdc7d5606fb193c545fc3"; // Replace with real key
