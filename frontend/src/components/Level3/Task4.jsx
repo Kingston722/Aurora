@@ -9,7 +9,7 @@ const Task4 = () => {
 
   const handleConvert = async () => {
     try {
-      const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/currency/convert`, {
+      await axios.get("http://localhost:8080/currency/convert", {
         params: {
           amount: parseFloat(amount),
           from: fromCurrency,

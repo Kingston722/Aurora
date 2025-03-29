@@ -31,7 +31,6 @@ const Task3 = () => {
         <div className="bg-gray-900 text-white p-6 rounded-lg shadow-lg w-full max-w-xl mx-auto mt-10 border border-gray-700">
             <h2 className="text-2xl font-bold mb-2 text-blue-400 text-center">🔐 AES-256 File Encryptor/Decryptor</h2>
 
-            {/* Task Description */}
             <div className="mb-4 p-3 bg-gray-800 border border-gray-700 rounded text-sm text-gray-300">
                 <p>
                     This task allows you to securely encrypt and decrypt text files using the
@@ -50,13 +49,13 @@ const Task3 = () => {
 
             <div className="flex justify-between gap-4">
                 <button
-                    onClick={() => sendFileToBackend(`${process.env.REACT_APP_BACKEND_URL}/file-security/encrypt`, setEncryptedText)}
+                    onClick={() => sendFileToBackend("http://localhost:8080/file-security/encrypt", setEncryptedText)}
                     className="bg-blue-600 hover:bg-blue-700 py-2 px-4 rounded w-1/2"
                 >
                     Encrypt
                 </button>
                 <button
-                    onClick={() => sendFileToBackend(`${process.env.REACT_APP_BACKEND_URL}/file-security/decrypt`, setDecryptedText)}
+                    onClick={() => sendFileToBackend("http://localhost:8080/file-security/decrypt", setDecryptedText)}
                     className="bg-green-600 hover:bg-green-700 py-2 px-4 rounded w-1/2"
                 >
                     Decrypt

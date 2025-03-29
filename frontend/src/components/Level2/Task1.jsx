@@ -15,7 +15,7 @@ const Task1 = () => {
 
   const fetchBoard = async () => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/tic-tac-toe/board`);
+      const response = await fetch("http://localhost:8080/tic-tac-toe/board");
       const data = await response.json();
 
       if (Array.isArray(data) && data.every((row) => Array.isArray(row))) {
@@ -30,7 +30,7 @@ const Task1 = () => {
 
   const resetGame = async () => {
     try {
-      await fetch(`${process.env.REACT_APP_BACKEND_URL}/tic-tac-toe/reset`, {
+      await fetch("http://localhost:8080/tic-tac-toe/reset", {
         method: "POST",
       });
       setMessage("Game Reset! Start a new game.");
@@ -45,7 +45,7 @@ const Task1 = () => {
     if (gameOver || board[row][col] !== "") return;
 
     try {
-      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/tic-tac-toe/move`, {
+      const response = await fetch("http://localhost:8080/tic-tac-toe/move", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ row, col }),

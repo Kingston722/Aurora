@@ -15,7 +15,7 @@ const Task3 = () => {
     if (grades.length === 0) return;
 
     try {
-      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/average`, {
+      const response = await fetch("http://localhost:8080/average", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

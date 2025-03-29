@@ -10,7 +10,7 @@ const Task4 = () => {
 
   const handleGeneratePassword = async () => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/generate`, {
+      const response = await fetch("http://localhost:8080/generate", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
